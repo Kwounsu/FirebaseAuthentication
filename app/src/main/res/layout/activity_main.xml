@@ -27,9 +27,9 @@
         android:layout_height="wrap_content"
         android:text="@string/google"/>
 
-<!--    <Button-->
-<!--        android:id="@+id/button_facebook"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/facebook"/>-->
+    <Button
+        android:id="@+id/button_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/facebook"/>
 </LinearLayout>
