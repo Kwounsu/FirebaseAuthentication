@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun facebookLogin(){
+    private fun facebookLogin(){
         LoginManager.getInstance().logInWithReadPermissions(this, listOf("public_profile","email"))
         LoginManager.getInstance().registerCallback(callbackManager,object: FacebookCallback<LoginResult> {
             override fun onSuccess(result: LoginResult?) {
