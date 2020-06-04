@@ -18,7 +18,6 @@ import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -106,10 +105,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        callbackManager.onActivityResult()
+        callbackManager.onActivityResult(requestCode,resultCode,data)
         if(requestCode == RC_SIGN_IN){
-            var task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            var account = task.getResult(ApiException::class.java)
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            val account = task.getResult(ApiException::class.java)
             firebaseAuthWithGoogle(account)
         }
     }
